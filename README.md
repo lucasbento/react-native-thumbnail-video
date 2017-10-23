@@ -4,6 +4,9 @@
 </p>
 
 ## Demo
+
+![Demo](https://cdn.rawgit.com/lucasbento/react-native-thumbnail-video/master/media/demo.gif)
+
 See the demo on Expo: [@lucasbento/react-native-thumbnail-video-example](https://expo.io/@lucasbento/react-native-thumbnail-video-example)
 
 ## Installation
