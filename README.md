@@ -59,6 +59,9 @@ Function to be called when the user presses the thumbnail. Defaults to opening t
 ##### `onPress` (function)
 Function to be called when there's an error on the default `onPress` function.
 
+##### `children` (component)
+Custom component to render inside of the thumbnail.
+
 ## License
 
 MIT © [Lucas Bento](http://github.com/lucasbento)

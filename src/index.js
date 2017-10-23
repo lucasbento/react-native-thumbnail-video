@@ -53,6 +53,7 @@ class Thumbnail extends PureComponent {
     iconStyle: Image.propTypes.style,
     onPress: PropTypes.func,
     onPressError: PropTypes.func,
+    children: PropTypes.node,
   };
 
   static defaultProps = {
@@ -97,6 +98,7 @@ class Thumbnail extends PureComponent {
       imageHeight,
       containerStyle,
       iconStyle,
+      children,
       ...props,
     } = this.props;
 
@@ -123,6 +125,8 @@ class Thumbnail extends PureComponent {
             source={require('./assets/play.png')}
             style={[styles.playIcon, iconStyle]}
           />
+
+          {children}
         </ImageBackground>
       </TouchableOpacity>
     );
