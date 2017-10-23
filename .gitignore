@@ -1,0 +1,18 @@
+# WebStorm
+.idea
+
+# VSCode
+.vscode
+
+# OSX
+.DS_Store
+
+# npm
+node_modules
+npm-debug.log
+
+# yarn
+yarn-debug.log
+
+# Test
+coverage

@@ -1,0 +1,24 @@
+{
+  "name": "react-native-thumbnail-video",
+  "description": "Easily show thumbnails for videos",
+  "version": "0.0.1",
+  "author": {
+    "name": "Lucas Bento",
+    "email": "lucas.bsilva@outlook.com",
+    "url": "https://github.com/lucasbento"
+  },
+  "bugs": "https://github.com/lucasbento/react-native-thumbnail-video/issues",
+  "homepage": "https://github.com/lucasbento/react-native-thumbnail-video#readme",
+  "license": "MIT",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/lucasbento/react-native-thumbnail-video"
+  },
+  "keywords": [
+    "react-native",
+    "youtube",
+    "video",
+    "thumbnail"
+  ]
+}

@@ -1,0 +1,9 @@
+.travis.yml
+media
+__tests__
+__mocks__
+test
+.babelrc
+.eslintrc
+.idea
+.vscode
