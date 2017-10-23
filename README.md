@@ -3,6 +3,9 @@
   Easily show thumbnails for videos.
 </p>
 
+## Demo
+See the demo on Expo: [@lucasbento/react-native-thumbnail-video-example](https://expo.io/@lucasbento/react-native-thumbnail-video-example)
+
 ## Installation
 
 ```sh
