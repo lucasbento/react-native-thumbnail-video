@@ -20,7 +20,7 @@ yarn add react-native-thumbnail-video
 ## Usage
 
 ```jsx
-import Thumbnail from 'react-native-thumnail-video';
+import Thumbnail from 'react-native-thumbnail-video';
 
 // ...
   render() {
