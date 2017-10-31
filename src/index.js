@@ -102,7 +102,7 @@ class Thumbnail extends PureComponent {
       ...props,
     } = this.props;
 
-    const imageURL = `http://img.youtube.com/vi/${videoId}/${this.getType()}.jpg`;
+    const imageURL = `https://img.youtube.com/vi/${videoId}/${this.getType()}.jpg`;
 
     return (
       <TouchableOpacity
