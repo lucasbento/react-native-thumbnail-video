@@ -20,5 +20,22 @@
     "youtube",
     "video",
     "thumbnail"
-  ]
+  ],
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/*"
+    ],
+    "modulePaths": [
+      "<rootDir>/src/**/*.test.js"
+    ]
+  },
+  "devDependencies": {
+    "babel-jest": "^21.2.0",
+    "babel-preset-react-native": "^4.0.0",
+    "jest": "^21.2.1"
+  }
 }
