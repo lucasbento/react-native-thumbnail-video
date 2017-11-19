@@ -11,15 +11,8 @@ import {
   StyleSheet,
 } from 'react-native';
 
-const { width } = Dimensions.get('window');
-
-const TYPES = {
-  'default': 'default',
-  high: 'hqdefault',
-  medium: 'mqdefault',
-  standard: 'sddefault',
-  maximum: 'maxresdefault',
-};
+import {DEFAULT_WIDTH, TYPES} from './constants';
+import {getVideoId} from '../helpers';
 
 export default class Thumbnail extends PureComponent {
   constructor(props) {
@@ -32,22 +25,22 @@ export default class Thumbnail extends PureComponent {
 
   static propTypes = {
     ...ImageBackground.propTypes,
-    url: PropTypes.string.isRequired,
-    type: PropTypes.oneOf(Object.keys(TYPES)),
-    imageWidth: PropTypes.number,
-    imageHeight: PropTypes.number,
-    style: ViewPropTypes.style,
+    children: PropTypes.node,
     containerStyle: ViewPropTypes.style,
+    imageHeight: PropTypes.number,
+    imageWidth: PropTypes.number,
     iconStyle: Image.propTypes.style,
     onPress: PropTypes.func,
     onPressError: PropTypes.func,
-    children: PropTypes.node,
+    style: ViewPropTypes.style,
+    type: PropTypes.oneOf(Object.keys(TYPES)),
+    url: PropTypes.string.isRequired,
   };
 
   static defaultProps = {
     type: 'high',
-    imageWidth: width,
     imageHeight: 200,
+    imageWidth: DEFAULT_WIDTH,
     onPressError: () => {},
   };
 
@@ -107,11 +100,13 @@ export default class Thumbnail extends PureComponent {
               height: imageHeight,
             },
           ]}
+          testId='thumbnail-image-background'
           {...props}
         >
           <Image
-            source={require('./assets/play.png')}
+            source={require('../assets/play.png')}
             style={[styles.playIcon, iconStyle]}
+            testId='thumbnail-image'
           />
 
           {children}
