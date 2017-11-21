@@ -25,7 +25,6 @@ describe('Thumbnail Component', () => {
       <Thumbnail url={testUrl} />
     ).getInstance();
 
-    // TODO: Mock the result
     expect(instance.state.videoId).toEqual('abc123');
   });
 
@@ -45,7 +44,7 @@ describe('Thumbnail Component', () => {
         <Thumbnail url={testUrl} />
       ).root;
 
-      let element = instance.findByProps({'testId': 'thumbnail-image'});
+      const element = instance.findByProps({'testId': 'thumbnail-image'});
 
       expect(element).not.toBeNull();
 
@@ -58,7 +57,7 @@ describe('Thumbnail Component', () => {
         <Thumbnail type={type} url={testUrl} />
       ).root;
 
-      let element = instance.findByProps({'testId': 'thumbnail-image-background'});
+      const element = instance.findByProps({'testId': 'thumbnail-image-background'});
 
       expect(element).not.toBeNull();
 
