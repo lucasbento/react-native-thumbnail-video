@@ -46,11 +46,11 @@ class Thumbnail extends PureComponent {
     ...ImageBackground.propTypes,
     url: PropTypes.string.isRequired,
     type: PropTypes.oneOf(Object.keys(TYPES)),
-    imageWidth: PropTypes.oneOf([
+    imageWidth: PropTypes.oneOfType([
       PropTypes.number,
       PropTypes.string,
     ]),
-    imageHeight: PropTypes.oneOf([
+    imageHeight: PropTypes.oneOfType([
       PropTypes.number,
       PropTypes.string,
     ]),
