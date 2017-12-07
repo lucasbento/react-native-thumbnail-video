@@ -26,7 +26,7 @@ const getVideoId = url => {
 };
 
 const TYPES = {
-  'default': 'default',
+  default: 'default',
   high: 'hqdefault',
   medium: 'mqdefault',
   standard: 'sddefault',
@@ -46,8 +46,14 @@ class Thumbnail extends PureComponent {
     ...ImageBackground.propTypes,
     url: PropTypes.string.isRequired,
     type: PropTypes.oneOf(Object.keys(TYPES)),
-    imageWidth: PropTypes.number,
-    imageHeight: PropTypes.number,
+    imageWidth: PropTypes.oneOf([
+      PropTypes.number,
+      PropTypes.string,
+    ]),
+    imageHeight: PropTypes.oneOf([
+      PropTypes.number,
+      PropTypes.string,
+    ]),
     style: ViewPropTypes.style,
     containerStyle: ViewPropTypes.style,
     iconStyle: Image.propTypes.style,

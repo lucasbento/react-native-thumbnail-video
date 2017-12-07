@@ -41,10 +41,10 @@ URL of the video
 ##### `type` ([string])
 Can be either `default`, `high`, `medium`, `standard` or `maximum`.
 
-##### `imageWidth` (number)
+##### `imageWidth` (number/string)
 Width of the image. Defaults to the device width.
 
-##### `imageHeight` (number)
+##### `imageHeight` (number/string)
 Height of the image. Defaults to `200`.
 
 ##### `containerStyle` ([ViewPropTypes.style](https://facebook.github.io/react-native/docs/view.html#style))
