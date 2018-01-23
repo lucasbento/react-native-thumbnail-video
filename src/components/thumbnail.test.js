@@ -74,11 +74,8 @@ describe('Thumbnail Component', () => {
   });
 
   test('propTypes', () => {
-
     expect(Thumbnail.propTypes.children).toBe(PropTypes.node);
     expect(Thumbnail.propTypes.containerStyle).toBe(ViewPropTypes.style);
-    expect(Thumbnail.propTypes.imageHeight).toBe(PropTypes.number);
-    expect(Thumbnail.propTypes.imageWidth).toBe(PropTypes.number);
     expect(Thumbnail.propTypes.iconStyle).toBe(Image.propTypes.style);
     expect(Thumbnail.propTypes.onPress).toBe(PropTypes.func);
     expect(Thumbnail.propTypes.onPressError).toBe(PropTypes.func);
@@ -87,15 +84,27 @@ describe('Thumbnail Component', () => {
 
     // Validate prop logging
     spyOn(console, 'error');
-    const props = {url: 'anything'};
+
+    expect(arePropsValid({imageHeight: 42})).toBeTruthy();
+    expect(arePropsValid({imageHeight: '42'})).toBeTruthy();
+    expect(arePropsValid({imageWidth: 42})).toBeTruthy();
+    expect(arePropsValid({imageWidth: '42'})).toBeTruthy();
 
     Object.keys(TYPES).forEach((type) => {
-      PropTypes.checkPropTypes(Thumbnail.propTypes, {...props, type: Object.keys(TYPES)[0]}, 'prop', 'Thumbnail');
-      expect(console.error.calls.count()).toBe(0);
+      expect(arePropsValid({type: Object.keys(TYPES)[0]})).toBeTruthy();
     })
 
-    PropTypes.checkPropTypes(Thumbnail.propTypes, {...props, type: '1inval1d'}, 'prop', 'Thumbnail');
-    expect(console.error.calls.count()).toBe(1);
+    expect(arePropsValid({type: '1inval1d'})).toBeFalsy();
     expect(console.error.calls.argsFor(0)[0]).toMatch(/Invalid/);
   });
 });
+
+function arePropsValid(props) {
+  const initialErrorCount = console.error.calls.count();
+
+  const requiredProps = {url: 'anything'}; // required props here
+
+  PropTypes.checkPropTypes(Thumbnail.propTypes, {...requiredProps, ...props}, 'prop', 'Thumbnail');
+
+  return initialErrorCount === console.error.calls.count();
+}
