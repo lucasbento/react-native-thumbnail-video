@@ -4464,9 +4464,9 @@ react-native-svg@5.3.0:
     color "^0.11.1"
     lodash "^4.16.6"
 
-react-native-thumbnail-video@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-thumbnail-video/-/react-native-thumbnail-video-0.0.1.tgz#6a03ebe0adbc116db707bd9c17357bb1354b27c6"
+react-native-thumbnail-video@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/react-native-thumbnail-video/-/react-native-thumbnail-video-0.0.7.tgz#fef8fcca7005e97c42894deadc693834bf7d0420"
 
 react-native-vector-icons@4.1.1:
   version "4.1.1"

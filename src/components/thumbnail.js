@@ -11,8 +11,8 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import {DEFAULT_WIDTH, TYPES} from './constants';
-import {getVideoId} from '../helpers';
+import { DEFAULT_WIDTH, TYPES } from './constants';
+import { getVideoId } from '../helpers';
 
 export default class Thumbnail extends PureComponent {
   constructor(props) {
@@ -27,8 +27,14 @@ export default class Thumbnail extends PureComponent {
     ...ImageBackground.propTypes,
     children: PropTypes.node,
     containerStyle: ViewPropTypes.style,
-    imageHeight: PropTypes.number,
-    imageWidth: PropTypes.number,
+    imageHeight: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
+    ]),
+    imageWidth: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
+    ]),
     iconStyle: Image.propTypes.style,
     onPress: PropTypes.func,
     onPressError: PropTypes.func,

@@ -9,5 +9,3 @@ export const getVideoId = url => {
 
   return url.split('/').pop();
 };
-
-
