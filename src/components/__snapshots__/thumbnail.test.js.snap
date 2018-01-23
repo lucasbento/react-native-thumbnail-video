@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Thumbnail Component snapshot matches 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  collapsable={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        Object {
+          "height": 200,
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <Image
+      onPressError={[Function]}
+      source={
+        Object {
+          "uri": "https://img.youtube.com/vi/abc123/hqdefault.jpg",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "height": undefined,
+            "width": undefined,
+          },
+          undefined,
+        ]
+      }
+      testId="thumbnail-image-background"
+      type="high"
+      url="http://www.youtube.com/watch?v=abc123"
+    />
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/assets/play.png",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "tintColor": "white",
+          },
+          undefined,
+        ]
+      }
+      testId="thumbnail-image"
+    />
+  </View>
+</View>
+`;
