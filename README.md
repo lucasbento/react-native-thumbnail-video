@@ -1,6 +1,12 @@
-<h1 align="center">react-native-thumbnail-video</h1>
-<p align="center">
-  Easily show thumbnails for videos.
+<h1>
+  react-native-thumbnail-video &middot;
+ 
+  <a href="https://travis-ci.org/lucasbento/react-native-thumbnail-video">
+    <img src="https://travis-ci.org/lucasbento/react-native-thumbnail-video.svg?branch=master" />
+  </a>
+</h1>
+<p>
+  Easily show thumbnails for videos using React Native.
 </p>
 
 ## Demo
