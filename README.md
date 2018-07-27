@@ -60,7 +60,7 @@ Style of the container using `TouchableOpacity`.
 Style of the icon image.
 
 ##### `showPlayIcon` (boolean)
-Style of the icon image.
+Show play icon. Defaults to true.
 
 ##### `onPress` (function)
 Function to be called when the user presses the thumbnail. Defaults to opening the video URL.
