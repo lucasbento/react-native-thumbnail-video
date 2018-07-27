@@ -59,6 +59,9 @@ Style of the container using `TouchableOpacity`.
 ##### `iconStyle` ([ImagePropTypes.style](https://facebook.github.io/react-native/docs/image.html#style))
 Style of the icon image.
 
+##### `showPlayIcon` (boolean)
+Style of the icon image.
+
 ##### `onPress` (function)
 Function to be called when the user presses the thumbnail. Defaults to opening the video URL.
 
