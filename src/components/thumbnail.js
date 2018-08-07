@@ -89,7 +89,7 @@ export default class Thumbnail extends PureComponent {
       iconStyle,
       children,
       showPlayIcon,
-      ...props,
+      ...props
     } = this.props;
 
     const imageURL = `https://img.youtube.com/vi/${videoId}/${this.getType()}.jpg`;
