@@ -1,11 +1,5 @@
-export const URL_PARAM_VIDEO = 'v=';
-
 export const getVideoId = url => {
-  const urlParts = url.split('?');
+  url = url.split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
 
-  if (urlParts.length > 1 && urlParts[1].includes(URL_PARAM_VIDEO)) {
-    return urlParts[1].split('v=')[1];
-  }
-
-  return url.split('/').pop();
+  return url[2] !== undefined ? url[2].split(/[^0-9a-z_-]/i)[0] : null;
 };

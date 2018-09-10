@@ -92,6 +92,12 @@ export default class Thumbnail extends PureComponent {
       ...props
     } = this.props;
 
+    if (process.env.NODE_ENV !== 'production') {
+      if(!videoId){
+        console.warn(`Invalid "url" could not extract videoId from "${props.url}"`);
+      }
+    }
+
     const imageURL = `https://img.youtube.com/vi/${videoId}/${this.getType()}.jpg`;
 
     return (
