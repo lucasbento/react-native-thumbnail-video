@@ -39,6 +39,17 @@ describe('Thumbnail Component', () => {
   });
 
   describe('renders', () => {
+
+    test('must render nothing when url is invalid', () => {
+      const instance = renderer.create(
+          <Thumbnail url='not valid url' />
+      ).root;
+
+      expect(() => {
+        instance.findByProps({'testId': 'thumbnail-image'});
+      }).toThrow();
+    });
+
     test('thumbnail-image', () => {
       const instance = renderer.create(
         <Thumbnail url={testUrl} />
