@@ -51,7 +51,17 @@ export default class Thumbnail extends PureComponent {
     showPlayIcon: true
   };
 
-  componentWillUpdate(nextProps) {
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const videoId = getVideoId(nextProps.url);
+
+    if(videoId !== prevState.videoId){
+      return { videoId };
+    }
+
+    return null;
+  }
+
+  UNSAFE_componentWillUpdate(nextProps) {
     if (this.props.url === nextProps.url || !nextProps.url) {
       return;
     }
@@ -81,6 +91,15 @@ export default class Thumbnail extends PureComponent {
 
   render() {
     const { videoId } = this.state;
+
+    if(!videoId){
+      if (process.env.NODE_ENV !== 'production') {
+        console.warn(`Invalid "url" could not extract videoId from "${this.props.url}"`);
+      }
+
+      return null;
+    }
+
     const {
       imageWidth,
       imageHeight,
@@ -122,7 +141,7 @@ export default class Thumbnail extends PureComponent {
             null
           )
         }
-          
+
 
           {children}
         </ImageBackground>
