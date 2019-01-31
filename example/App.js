@@ -6,7 +6,7 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
-import Thumbnail from 'react-native-thumbnail-video';
+import { Thumbnail } from 'react-native-thumbnail-video';
 
 const VIDEO = 'https://www.youtube.com/watch?v=lgj3D5-jJ74';
 const TYPING_TIMEOUT = 700;

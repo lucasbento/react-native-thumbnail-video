@@ -26,7 +26,7 @@ yarn add react-native-thumbnail-video
 ## Usage
 
 ```jsx
-import Thumbnail from 'react-native-thumbnail-video';
+import { Thumbnail } from 'react-native-thumbnail-video';
 
 // ...
   render() {
@@ -65,7 +65,7 @@ Show play icon. Defaults to true.
 ##### `onPress` (function)
 Function to be called when the user presses the thumbnail. Defaults to opening the video URL.
 
-##### `onPress` (function)
+##### `onError` (function)
 Function to be called when there's an error on the default `onPress` function.
 
 ##### `children` (component)
