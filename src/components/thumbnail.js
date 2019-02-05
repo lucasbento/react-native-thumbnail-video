@@ -61,16 +61,6 @@ export default class Thumbnail extends PureComponent {
     return null;
   }
 
-  UNSAFE_componentWillUpdate(nextProps) {
-    if (this.props.url === nextProps.url || !nextProps.url) {
-      return;
-    }
-
-    this.setState({
-      videoId: getVideoId(nextProps.url),
-    });
-  }
-
   getType = () => TYPES[this.props.type];
 
   onPress = () => {
